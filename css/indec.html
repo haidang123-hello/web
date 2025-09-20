@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<header class="main-header">
+		<div class="header-container">
+			<a href="#" class="logo-container">
+				<img class="logo-img" src="D:\html\bai ktr cuoi khoa\image\logo-removebg-preview.png" alt="">
+			</a>
+		</div>
+		<div class="category">
+			<ul>
+				<li>
+					<div>Trang chủ</div>
+				</li>
+				<li>
+					<div>Quần</div>
+				</li>
+				<li>
+					<div>Áo</div>
+				</li>
+			</ul>
+		</div>
+		<div class="login">
+			<ul>
+				<li>
+					<a href="">
+						<img src="D:\html\bai ktr cuoi khoa\image\login.png" title="person icons"></img>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="D:\html\bai ktr cuoi khoa\image\register.png" title="register icons"></img>
+				</li>
+				</a>
+			</ul>
+		</div>
+
+	</header>
+	<section class="slideshow-container">
+		<div class="slide-wrapper">
+			<div class="slide">
+				<img id="slide-1" src="D:\html\bai ktr cuoi khoa\image\ao1.jpg" alt="ao1">
+				<img id="slide-2" src="D:\html\bai ktr cuoi khoa\image\ao2.jpg" alt="ao2">
+				<img id="slide-3" src="D:\html\bai ktr cuoi khoa\image\anh2.jpeg" alt="ao3">
+
+
+			</div>
+			<div class="slide-nav">
+				<a href="#slide-1"></a>
+				<a href="#slide-2"></a>
+				<a href="#slide-3"></a>
+			</div>
+
+
+	</section>
+
+	<div class="product-container">
+		<section class="product-section">
+			<div class="product-nav">
+				<h3>Áo</h3>
+				<div class="sub-category-nav">
+					<ul>
+						<li>ÁO PHÔNG</li>
+						<li>ÁO POLO</li>
+						<li>SƠ MI</li>
+						<li>ÁO KHOÁC</li>
+						<li>ÁO NỈ</li>
+					</ul>
+
+				</div>
+
+			</div>
+			<div class="product-content">
+				<div class="product-list">
+					<div class="product-block">
+						
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+
+
+	<!-- <footer>
+		<div class="footer-container">
+			<div class="footer-col">
+				<h3>HỖ TRỢ KHÁCH HÀNG</h3>
+				<ul>
+					<li><a href="#">Hướng dẫn đặt hàng</a></li>
+					<li><a href="#">Hướng dẫn chọn size</a></li>
+					<li><a href="#">Hướng dẫn bảo quản</a></li>
+					<li><a href="#">Chính sách đổi trả</a></li>
+					<li><a href="#">Chính sách bảo mật</a></li>
+
+				</ul>
+			</div>
+
+			<div class="footer-col">
+				<h3>VỀ CHÚNG TÔI</h3>
+				<ul>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Hệ thống cửa hàng</a></li>
+
+				</ul>
+			</div>
+
+			<div class="footer-col">
+				<h3>LIÊN HỆ</h3>
+				<ul>	
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Instagram</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5672.9232547370675!2d105.8447227!3d21.0420866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abba0e4da77b%3A0x60f09627677f54dc!2zNTMgUC4gTmd1eeG7hW4gVHLGsOG7nW5nIFThu5ksIFRyw7pjIELhuqFjaCwgQmEgxJDDrG5oLCBIw6AgTuG7mWk!5e1!3m2!1svi!2s!4v1758117046669!5m2!1svi!2s"
+			width="800" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</footer> -->
+</body>
+
+<script>
+	const slideContainer = document.querySelector('.slide');
+	const slides = document.querySelectorAll('.slide img');
+	const totalSlides = slides.length;
+	let currentIndex = 0;
+
+	function nextSlide() {
+		currentIndex++;
+
+		if (currentIndex >= totalSlides) {
+			currentIndex = 0;
+		}
+
+		const slideWidth = slides[0].clientWidth;
+		slideContainer.scrollTo({
+			left: slideWidth * currentIndex,
+			behavior: 'smooth'
+		});
+	}
+
+	setInterval(nextSlide, 3000); // Change slide every 3s
+</script>
+
+</html>
